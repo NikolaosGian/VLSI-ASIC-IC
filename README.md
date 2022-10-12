@@ -1,5 +1,3 @@
-# LargeScaleDigitalVLSI-ASICIntegrated-Circuits
-
 <br />
 <div align="center">
   <h1 align="center">LargeScale Digital VLSI-ASIC Integrated Circuits</h1>
