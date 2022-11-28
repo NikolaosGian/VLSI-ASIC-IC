@@ -1,0 +1,467 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Mon Nov 21 11:12:37 2022                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v19.11-s128_1 (64bit) 08/20/2019 20:54 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: NanoRoute 19.11-s128_1 NR190815-2055/19_11-UB (database version 18.20, 469.7.1) {superthreading v1.51}
+#@(#)CDS: AAE 19.11-s034 (64bit) 08/20/2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: CTE 19.11-s040_1 () Aug  1 2019 08:53:57 ( )
+#@(#)CDS: SYNTECH 19.11-e010_1 () Jul 15 2019 20:31:02 ( )
+#@(#)CDS: CPE v19.11-s006
+#@(#)CDS: IQuantus/TQuantus 19.1.2-s245 (64bit) Thu Aug 1 10:22:01 PDT 2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+getVersion
+getVersion
+win
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+is_common_ui_mode
+restoreDesign /mnt/scratch_b/users/n/ngiannop/Desktop/VLSI_ASIC22/innovus/logs/picorv32.dat picorv32
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+fit
+fit
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { GND Vdd } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { GND Vdd } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+setRouteMode -earlyGlobalMinRouteLayer 1 -earlyGlobalMaxRouteLayer 11 -earlyGlobalHonorMsvRouteConstraint true -earlyGlobalRoutePartitionPinGuide true
+earlyGlobalRoute
+fit
+refinePlace -checkRoute 0 -preserveRouting 1 -rmAffectedRouting 0 -swapEEQ 0
+checkPlace picorv32.checkPlace
+setDrawView place
+fit
+setRouteMode -earlyGlobalMinRouteLayer 1 -earlyGlobalMaxRouteLayer 11 -earlyGlobalHonorMsvRouteConstraint true -earlyGlobalRoutePartitionPinGuide true
+earlyGlobalRoute
+refinePlace -checkRoute 0 -preserveRouting 1 -rmAffectedRouting 0 -swapEEQ 0
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal2(2) Metal10(10) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal2(2) Metal10(10) } -nets { GND Vdd } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal2(2) Metal10(10) }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { GND Vdd } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { GND Vdd } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { GND Vdd } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal1(1) Metal11(11) }
+checkPlace picorv32.checkPlace
+setDrawView place
+fit
+refinePlace -checkRoute 0 -preserveRouting 1 -rmAffectedRouting 0 -swapEEQ 0
+setRouteMode -earlyGlobalMinRouteLayer 1 -earlyGlobalMaxRouteLayer 11 -earlyGlobalHonorMsvRouteConstraint true -earlyGlobalRoutePartitionPinGuide true
+earlyGlobalRoute
+checkPlace picorv32.checkPlace
+setDrawView place
+fit
+zoomBox 22.70450 142.25050 97.56800 95.50450
+ui_view_box
+dbquery -area {0.0 0.0 0.0 0.0} -objType inst
+dbquery -area {0.0 0.0 0.0 0.0} -objType regular
+dbquery -area {0.0 0.0 0.0 0.0} -objType special
+gui_select -rect {20.01450 138.10600 37.74850 127.50650}
+zoomBox 3.64000 86.15550 116.63200 132.90150
+zoomBox 3.64000 81.48100 116.63200 128.22700
+zoomBox -12.85350 69.65900 143.53750 134.35950
+zoomBox -23.34200 62.14100 160.64750 138.25950
+zoomBox -50.19950 42.89050 204.45950 148.24550
+deselectAll
+gui_select -rect {18.71000 137.22000 102.77950 82.39850}
+ui_view_box
+dbquery -area {-38.532 68.704 160.102 150.881} -objType inst
+dbquery -area {-38.532 68.704 160.102 150.881} -objType regular
+dbquery -area {-38.532 68.704 160.102 150.881} -objType special
+ui_view_box
+dbquery -area {-38.532 68.704 160.102 150.881} -objType inst
+dbquery -area {-38.532 68.704 160.102 150.881} -objType regular
+dbquery -area {-38.532 68.704 160.102 150.881} -objType special
+deselectAll
+selectInst {reg_out_reg[5]}
+deselectAll
+selectInst g212013
+deselectAll
+selectInst inc_add_382_74_g701
+ui_view_box
+dbquery -area {76.9 105.64 89.3 110.77} -objType inst
+dbquery -area {76.9 105.64 89.3 110.77} -objType regular
+dbquery -area {76.9 105.64 89.3 110.77} -objType special
+gui_select -rect {-9.92550 131.09450 46.88650 103.37750}
+deselectAll
+deselectAll
+zoomBox -76.43150 6.42950 276.03800 152.24950
+zoomBox -84.13650 -49.65000 330.53350 121.90300
+zoomBox -64.31600 6.34850 190.34400 111.70400
+zoomBox -54.66850 19.78600 161.79250 109.33800
+setDrawView fplan
+zoomBox -63.92550 10.23050 190.73450 115.58600
+zoomBox -87.62950 -14.20550 264.84300 131.61600
+zoomBox -120.43650 -47.98900 367.41500 153.84000
+zoomBox 255.93950 10.38900 -38.88350 200.48350
+zoomBox -121.21550 -27.63000 338.27150 162.46450
+zoomBox -271.90900 -75.17300 364.05950 187.93350
+zoomBox -187.58550 -36.45300 352.98850 187.18800
+zoomBox 252.22000 -6.87250 -29.28150 224.24500
+setDrawView ameba
+setDrawView place
+setDrawView fplan
+setDrawView place
+setDrawView ameba
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { Metal2(2) Metal10(10) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { Metal2(2) Metal10(10) } -nets { GND Vdd } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { Metal2(2) Metal10(10) }
+checkPlace picorv32.checkPlace
+setDrawView place
+fit
+refinePlace -checkRoute 0 -preserveRouting 1 -rmAffectedRouting 0 -swapEEQ 0
+setRouteMode -earlyGlobalMinRouteLayer 2 -earlyGlobalMaxRouteLayer 10 -earlyGlobalHonorMsvRouteConstraint true -earlyGlobalRoutePartitionPinGuide true
+earlyGlobalRoute
+checkPlace picorv32.checkPlace
+setDrawView place
+fit
+add_ndr -width {Metal1 0.12 Metal2 0.16 Metal3 0.16 Metal4 0.16 Metal5 0.16 Metal6 0.16 Metal7 0.16 Metal8 0.16 Metal9 0.16 Metal10 0.44 Metal11 0.44 } -spacing {Metal1 0.12 Metal2 0.14 Metal3 0.14 Metal4 0.14 Metal5 0.14 Metal6 0.14 Metal7 0.14 Metal8 0.14 Metal9 0.14 Metal10 0.4 Metal11 0.4 } -name exercise1
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+selectWire 3.0000 213.8250 219.2000 216.8250 5 GND
+deselectAll
+selectWire 216.2000 3.0050 219.2000 216.8250 6 GND
+deselectAll
+selectWire 204.2000 9.0050 207.2000 210.8250 5 Vdd
+deselectAll
+selectWire 9.0000 207.8250 213.2000 210.8250 5 Vdd
+create_route_type -top_preferred_layer 6 -bottom_preferred_layer 4 -non_default_rule exercise1 -name exercise1_clock_tree shield_net Vdd
+create_route_type * -help
+create_route_type -help
+create_route_type -top_preferred_layer 6 -bottom_preferred_layer 4 -non_default_rule exercise1 -name exercise1_clock_tree
+set_ccopt_property -target_skew 100 -target_max_trans 150
+set_ccopt_property -help
+set_ccopt_property -target_skew 100 -target_max_trans 150
+set_ccopt_property -target_skew 100 target_max_trans 150
+set_ccopt_property target_skew 0.1 target_max_trans 0.15
+set_ccopt_property target_skew 0.1
+set_ccopt_property target_max_trans 0.15
+setRouteMode -earlyGlobalHonorMsvRouteConstraint true -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setUsefulSkewMode -maxSkew false -noBoundary false -useCells {DLY4X4 DLY4X1 DLY3X4 DLY3X1 DLY2X4 DLY2X1 DLY1X4 DLY1X1 CLKBUFX8 CLKBUFX6 CLKBUFX4 CLKBUFX3 CLKBUFX20 CLKBUFX2 CLKBUFX16 CLKBUFX12 BUFX8 BUFX6 BUFX4 BUFX3 BUFX20 BUFX2 BUFX16 BUFX12 INVXL INVX8 INVX6 INVX4 INVX3 INVX20 INVX2 INVX16 INVX12 INVX1 CLKINVX8 CLKINVX6 CLKINVX4 CLKINVX3 CLKINVX20 CLKINVX2 CLKINVX16 CLKINVX12 CLKINVX1} -maxAllowedDelay 1
+report_area
+report_power
+report_timing
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postCTS -pathReports -slackReports -numPaths 50 -prefix picorv32_postCTS -outDir timingReports
+zoomBox -93.43450 24.78500 211.67750 151.01300
+deselectAll
+fit
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -preCTS -hold -pathReports -slackReports -numPaths 50 -prefix picorv32_preCTS -outDir timingReports
+create_ccopt_clock_tree_spec file exercise1.spe
+create_ccopt_clock_tree_spec file exercise1.spec
+create_ccopt_clock_tree_spec -file exercise1.spec
+create_ccopt_clock_tree_spec -file tree_step_14_exercise1.spec
+ccopt_design
+getCTSMode -engine -quiet
+ctd_win -id ctd_window
+selectObject Net clk
+zoomSelected
+deselectObject Net clk
+selectInst RC_CG_HIER_INST17/RC_CGIC_INST
+zoomSelected
+deselectInst RC_CG_HIER_INST17/RC_CGIC_INST
+selectObject IO_Pin clk
+zoomSelected
+deselectAll
+fit
+selectInst {count_cycle_reg[29]}
+zoomSelected
+deselectInst {count_cycle_reg[29]}
+selectObject Net rc_gclk_44013
+zoomSelected
+deselectAll
+zoomBox -219.60800 17.09350 242.62550 208.32400
+zoomBox -499.56600 -82.10600 253.10450 229.28150
+zoomBox -623.36500 -127.31300 262.13000 239.02550
+zoomBox -17.94850 233.70100 234.44150 -18.68950
+optDesign postCTS
+optDesign -postCTS
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -preCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix picorv32_preCTS -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -preCTS -hold -pathReports -slackReports -numPaths 50 -prefix picorv32_preCTS -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix picorv32_postCTS -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postCTS -hold -pathReports -slackReports -numPaths 50 -prefix picorv32_postCTS -outDir timingReports
+report_power
+report_area
+zoomBox -387.18350 -91.59400 1851.67150 834.64300
+zoomBox -39.84450 270.55400 267.10600 -16.20250
+zoomBox -14.11800 228.04050 232.62600 -6.19950
+report_ccopt_clock_trees
+report_ccopt_clock_trees - help
+report_ccopt_skew_groups
+report_ccopt_skew_groups
+report_ccopt_clock_trees
+report_ccopt_skew_groups
+setRouteMode -earlyGlobalHonorMsvRouteConstraint true -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -drouteUseMultiCutViaEffort high
+setUsefulSkewMode -maxSkew false -noBoundary false -useCells {BUFX12 BUFX16 BUFX2 BUFX20 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8 DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4 CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX6 CLKINVX8 INVX1 INVX12 INVX16 INVX2 INVX20 INVX3 INVX4 INVX6 INVX8 INVXL} -maxAllowedDelay 1
+setRouteMode -earlyGlobalHonorMsvRouteConstraint true -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -drouteUseMultiCutViaEffort medium
+setUsefulSkewMode -maxSkew false -noBoundary false -useCells {DLY4X4 DLY4X1 DLY3X4 DLY3X1 DLY2X4 DLY2X1 DLY1X4 DLY1X1 CLKBUFX8 CLKBUFX6 CLKBUFX4 CLKBUFX3 CLKBUFX20 CLKBUFX2 CLKBUFX16 CLKBUFX12 BUFX8 BUFX6 BUFX4 BUFX3 BUFX20 BUFX2 BUFX16 BUFX12 INVXL INVX8 INVX6 INVX4 INVX3 INVX20 INVX2 INVX16 INVX12 INVX1 CLKINVX8 CLKINVX6 CLKINVX4 CLKINVX3 CLKINVX20 CLKINVX2 CLKINVX16 CLKINVX12 CLKINVX1} -maxAllowedDelay 1
+setNanoRouteMode -quiet -routeWithTimingDriven 1
+setNanoRouteMode -quiet -routeWithSiDriven 1
+setNanoRouteMode -quiet -routeTopRoutingLayer default
+setNanoRouteMode -quiet -routeBottomRoutingLayer default
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -routeWithTimingDriven true
+setNanoRouteMode -quiet -routeWithSiDriven true
+routeDesign -globalDetail
+optDesign -postRoute -setup -hold
+optDesign -postRoute -setup -hold
+optDesign -postRoute
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix picorv32_postRoute -outDir timingReports
+getCTSMode -engine -quiet
+checkPlace picorv32.checkPlace
+setDrawView place
+fit
+refinePlace -checkRoute 0 -preserveRouting 1 -rmAffectedRouting 0 -swapEEQ 0
+getCTSMode -engine -quiet
+setRouteMode -earlyGlobalHonorMsvRouteConstraint true -earlyGlobalRoutePartitionPinGuide true
+earlyGlobalRoute
+getCTSMode -engine -quiet
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix picorv32_postRoute -outDir timingReports
+zoomBox -199.50900 -44.73300 488.13650 239.75300
+zoomBox -172.59050 -14.34100 411.90850 227.47200
+zoomBox -149.71000 11.49200 347.11500 217.03350
+zoomBox -172.59150 -14.34150 411.90950 227.47250
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+getCTSMode -engine -quiet
+gui_select -rect {52.00050 55.25050 8.41750 77.74450}
+deselectAll
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix picorv32_postRoute -outDir timingReports
+getCTSMode -engine -quiet
+checkPlace picorv32.checkPlace
+setDrawView place
+fit
+refinePlace -checkRoute 0 -preserveRouting 1 -rmAffectedRouting 0 -swapEEQ 0
+setRouteMode -earlyGlobalHonorMsvRouteConstraint true -earlyGlobalRoutePartitionPinGuide true
+earlyGlobalRoute
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix picorv32_postRoute -outDir timingReports
+optDesign -postRoute -setup -hold
+optDesign -postRoute -hold
+checkPlace picorv32.checkPlace
+setDrawView place
+fit
+refinePlace -checkRoute 0 -preserveRouting 1 -rmAffectedRouting 0 -swapEEQ 0
+setRouteMode -earlyGlobalHonorMsvRouteConstraint true -earlyGlobalRoutePartitionPinGuide true
+earlyGlobalRoute
+optDesign -postRoute -hold
+setRouteMode -earlyGlobalHonorMsvRouteConstraint true -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setUsefulSkewMode -maxSkew false -noBoundary false -useCells {BUFX12 BUFX16 BUFX2 BUFX20 BUFX3 BUFX4 BUFX6 BUFX8 CLKBUFX12 CLKBUFX16 CLKBUFX2 CLKBUFX20 CLKBUFX3 CLKBUFX4 CLKBUFX6 CLKBUFX8 DLY1X1 DLY1X4 DLY2X1 DLY2X4 DLY3X1 DLY3X4 DLY4X1 DLY4X4 CLKINVX1 CLKINVX12 CLKINVX16 CLKINVX2 CLKINVX20 CLKINVX3 CLKINVX4 CLKINVX6 CLKINVX8 INVX1 INVX12 INVX16 INVX2 INVX20 INVX3 INVX4 INVX6 INVX8 INVXL} -maxAllowedDelay 1
+setNanoRouteMode -quiet -routeTopRoutingLayer default
+setNanoRouteMode -quiet -routeBottomRoutingLayer default
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -routeWithTimingDriven true
+setNanoRouteMode -quiet -routeWithSiDriven true
+routeDesign -globalDetail
+checkPlace picorv32.checkPlace
+setDrawView place
+fit
+refinePlace -checkRoute 0 -preserveRouting 1 -rmAffectedRouting 0 -swapEEQ 0
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix picorv32_postRoute -outDir timingReports
+setAnalysisMode -analysisType onChupVartion
+setAnalysisMode -analysisType onChipVartion
+setAnalysisMode -analysisType onChipVariation
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix picorv32_postRoute -outDir timingReports
+optDesign -postRoute
+checkPlace picorv32.checkPlace
+setDrawView place
+fit
+refinePlace -checkRoute 0 -preserveRouting 1 -rmAffectedRouting 0 -swapEEQ 0
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -pathReports -drvReports -slackReports -numPaths 50 -prefix picorv32_postRoute -outDir timingReports
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -postRoute -hold -pathReports -slackReports -numPaths 50 -prefix picorv32_postRoute -outDir timingReports
+optDesign -postRoute -setup -hold
+report_power
+report_area
+getMultiCpuUsage -localCpu
+get_verify_drc_mode -disable_rules -quiet
+get_verify_drc_mode -quiet -area
+get_verify_drc_mode -quiet -layer_range
+get_verify_drc_mode -check_implant -quiet
+get_verify_drc_mode -check_implant_across_rows -quiet
+get_verify_drc_mode -check_ndr_spacing -quiet
+get_verify_drc_mode -check_only -quiet
+get_verify_drc_mode -check_same_via_cell -quiet
+get_verify_drc_mode -exclude_pg_net -quiet
+get_verify_drc_mode -ignore_trial_route -quiet
+get_verify_drc_mode -max_wrong_way_halo -quiet
+get_verify_drc_mode -use_min_spacing_on_block_obs -quiet
+get_verify_drc_mode -limit -quiet
+set_verify_drc_mode -disable_rules {} -check_implant true -check_implant_across_rows false -check_ndr_spacing false -check_only default -check_same_via_cell false -exclude_pg_net false -ignore_trial_route false -use_min_spacing_on_block_obs auto -report picorv32.drc.rpt -limit 1000
+verify_drc
+set_verify_drc_mode -area {0 0 0 0}
+saveDesign picorv32
+verifyConnectivity -type all -error 1000 -warning 50
+setMetalFill -layer Metal1 -opcActiveSpacing 0.060
+setMetalFill -layer Metal2 -opcActiveSpacing 0.070
+setMetalFill -layer Metal3 -opcActiveSpacing 0.070
+setMetalFill -layer Metal4 -opcActiveSpacing 0.070
+setMetalFill -layer Metal5 -opcActiveSpacing 0.070
+setMetalFill -layer Metal6 -opcActiveSpacing 0.070
+setMetalFill -layer Metal7 -opcActiveSpacing 0.070
+setMetalFill -layer Metal8 -opcActiveSpacing 0.070
+setMetalFill -layer Metal9 -opcActiveSpacing 0.070
+setMetalFill -layer Metal10 -opcActiveSpacing 0.200
+setMetalFill -layer Metal11 -opcActiveSpacing 0.200
+addMetalFill -layer { Metal1 Metal2 Metal3 Metal4 Metal5 Metal6 Metal7 Metal8 Metal9 Metal10 Metal11 } -nets { GND Vdd }
+saveDesign picorv32
+gui_select -rect {-17.71500 172.47700 33.60000 81.09450}
+deselectAll
+selectWire 160.7100 151.1150 162.7100 161.1150 10 GND
+deselectAll
+selectWire 73.4750 182.8500 83.4750 184.8500 9 Vdd
+gui_select -rect {69.80200 225.19800 131.30950 170.36850}
+deselectAll
+deselectAll
+setDrawView fplan
+setDrawView ameba
+setDrawView place
+ui_view_box
+dbquery -area {0.0 0.0 0.0 0.0} -objType inst
+dbquery -area {0.0 0.0 0.0 0.0} -objType regular
+dbquery -area {0.0 0.0 0.0 0.0} -objType special
+gui_select -rect {-7.52200 218.16850 85.26650 177.04600}
+ui_view_box
+dbquery -area {-31.7665 166.775 117.251 228.425} -objType inst
+dbquery -area {-31.7665 166.775 117.251 228.425} -objType regular
+dbquery -area {-31.7665 166.775 117.251 228.425} -objType special
+ui_view_box
+dbquery -area {-31.7665 166.775 117.251 228.425} -objType inst
+dbquery -area {-31.7665 166.775 117.251 228.425} -objType regular
+dbquery -area {-31.7665 166.775 117.251 228.425} -objType special
+ui_view_box
+dbquery -area {-31.7665 166.775 117.251 228.425} -objType inst
+dbquery -area {-31.7665 166.775 117.251 228.425} -objType regular
+dbquery -area {-31.7665 166.775 117.251 228.425} -objType special
+gui_select -rect {11.10600 213.24800 68.04450 169.31400}
+deselectAll
+ui_view_box
+dbquery -area {-119.3815 125.465 198.631 257.03} -objType inst
+dbquery -area {-119.3815 125.465 198.631 257.03} -objType regular
+dbquery -area {-119.3815 125.465 198.631 257.03} -objType special
+ui_view_box
+dbquery -area {-119.3815 125.465 198.631 257.03} -objType inst
+dbquery -area {-119.3815 125.465 198.631 257.03} -objType regular
+dbquery -area {-119.3815 125.465 198.631 257.03} -objType special
+deselectAll
+gui_select -rect {284.20000 207.62450 143.96250 134.16650}
+ui_view_box
+dbquery -area {50.048 115.8415 315.867 225.8135} -objType inst
+dbquery -area {50.048 115.8415 315.867 225.8135} -objType regular
+dbquery -area {50.048 115.8415 315.867 225.8135} -objType special
+ui_view_box
+dbquery -area {50.048 115.8415 315.867 225.8135} -objType inst
+dbquery -area {50.048 115.8415 315.867 225.8135} -objType regular
+dbquery -area {50.048 115.8415 315.867 225.8135} -objType special
+deselectAll
+gui_select -rect {241.67200 3.06750 182.97600 19.58650}
+gui_select -rect {238.86000 161.23000 95.10800 89.17800}
+deselectAll
+ui_view_box
+dbquery -area {28.156 71.18 289.3535 179.24} -objType inst
+dbquery -area {28.156 71.18 289.3535 179.24} -objType regular
+dbquery -area {28.156 71.18 289.3535 179.24} -objType special
+deselectAll
+ui_view_box
+dbquery -area {0.0 0.0 0.0 0.0} -objType inst
+dbquery -area {0.0 0.0 0.0 0.0} -objType regular
+dbquery -area {0.0 0.0 0.0 0.0} -objType special
+zoomBox 153.10050 221.33150 211.79650 189.69900
+zoomBox 101.99100 161.74350 248.46550 222.34150
+zoomBox 43.82500 131.80300 282.33500 230.47700
+zoomBox -14.07000 102.00150 316.04750 238.57450
+zoomBox -50.88700 83.05000 337.48650 243.72400
+zoomBox -94.20150 60.75350 362.70850 249.78200
+zoomBox -16.44750 233.02200 231.92700 70.91950
+zoomBox -220.38800 45.21850 321.93250 269.58200
+zoomBox -304.46700 28.87450 333.55750 292.83150
+zoomBox -403.38350 9.64600 347.23400 320.18400
+zoomBox -21.98150 244.80650 247.93400 -2.99250
+gui_select -rect {138.72850 230.39950 225.89050 169.89050}
+ui_view_box
+dbquery -area {90.6695 157.549 270.015 231.746} -objType inst
+dbquery -area {90.6695 157.549 270.015 231.746} -objType regular
+dbquery -area {90.6695 157.549 270.015 231.746} -objType special
+deselectAll
+gui_select -rect {245.34000 219.95450 207.88200 187.53900}
+ui_view_box
+dbquery -area {99.9445 155.94 329.9605 251.1} -objType inst
+dbquery -area {99.9445 155.94 329.9605 251.1} -objType regular
+dbquery -area {99.9445 155.94 329.9605 251.1} -objType special
+deselectAll
+selectWire 137.9600 144.2400 139.9600 154.2400 10 Vdd
+deselectAll
+selectVia 73.6350 110.0400 73.9050 110.1700 4 n_2105
+deselectAll
+selectWire 60.6600 124.1250 64.9400 124.2050 3 n_248
+deselectAll
+selectWire 58.7650 99.3450 60.6350 100.1450 5 _FILLS_RESERVED
+deselectAll
+selectWire 43.2600 127.7350 43.3400 162.2050 4 n_1172
+gui_select -rect {32.11750 142.87750 101.27050 80.56750}
+deselectAll
+deselectAll
+zoomBox 26.71500 151.88200 97.66900 76.24550
+zoomBox 36.96150 133.52250 76.97850 99.11250
+zoomBox -145.06700 63.93550 214.04050 212.50200
+zoomBox -185.04400 32.91600 311.99150 238.54450
+zoomBox -210.46650 13.13700 374.28150 255.05300
+zoomBox -12.15150 233.25250 233.63250 12.08200
+zoomBox -225.43150 5.21750 403.51350 265.41850
+zoomBox 255.16750 -8.82350 -28.48200 224.14750
+checkPlace picorv32.checkPlace
+setDrawView place
+fit
+refinePlace -checkRoute 0 -preserveRouting 1 -rmAffectedRouting 0 -swapEEQ 0
+saveDesign picorv32
+saveDesign picorv32
+report_power

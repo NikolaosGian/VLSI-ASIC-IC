@@ -1,0 +1,180 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sun Nov  6 16:39:11 2022                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v19.11-s128_1 (64bit) 08/20/2019 20:54 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: NanoRoute 19.11-s128_1 NR190815-2055/19_11-UB (database version 18.20, 469.7.1) {superthreading v1.51}
+#@(#)CDS: AAE 19.11-s034 (64bit) 08/20/2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: CTE 19.11-s040_1 () Aug  1 2019 08:53:57 ( )
+#@(#)CDS: SYNTECH 19.11-e010_1 () Jul 15 2019 20:31:02 ( )
+#@(#)CDS: CPE v19.11-s006
+#@(#)CDS: IQuantus/TQuantus 19.1.2-s245 (64bit) Thu Aug 1 10:22:01 PDT 2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+getVersion
+getVersion
+win
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+is_common_ui_mode
+restoreDesign /mnt/scratch_b/users/n/ngiannop/Desktop/VLSI_ASIC22/innovus/logs/picorv32.dat picorv32
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+getPlaceMode
+zoomBox -34.37200 -16.90950 286.66100 267.57650
+place_opt_design
+zoomBox -21.91300 134.26250 21.69450 29.18950
+zoomBox -5.55450 118.46300 1.34800 76.89400
+zoomBox -3.52950 108.81400 1.93200 91.51900
+zoomBox -1.69550 103.38550 1.53650 97.04850
+zoomBox -0.74100 100.49000 0.64700 98.37150
+uiSetTool move
+uiSetTool select
+zoomBox -3948.37000 -5857.41000 20131.79500 4104.79900
+zoomBox -1982.71400 -2978.13800 10587.28400 2222.19800
+zoomBox -486.10550 574.41700 829.09550 -445.99750
+zoomBox -82.86700 286.68400 308.68750 -84.10650
+zoomBox -25.86650 237.64050 242.52550 -25.36200
+zoomBox -7.30750 230.75950 237.72800 -7.01300
+checkPlace picorv32.checkPlace
+setDrawView place
+fit
+zoomBox -50.73800 50.79300 208.60900 158.08750
+zoomBox 4.69750 81.15750 119.77200 128.76500
+zoomBox 29.29450 94.62950 80.35400 115.75350
+zoomBox 32.23700 96.24150 75.63800 114.19700
+zoomBox -7.64500 76.54950 127.74350 132.56100
+zoomBox -81.21050 40.26350 223.92100 166.49950
+zoomBox -298.61450 -66.77250 510.43250 267.93850
+zoomBox -246.29200 -41.01250 441.39850 243.49200
+zoomBox 42.34800 178.15500 53.09950 161.61400
+selectMarker 45.2000 168.9100 46.2000 170.6200 -1 12 87
+zoomBox 0.53350 145.77100 106.54600 189.62950
+zoomBox -116.05150 77.86250 272.99800 238.81600
+zoomBox -144.33150 61.38950 313.37400 250.74700
+zoomBox -262.79250 -7.61150 482.50450 300.72550
+zoomBox -316.96800 -39.16750 559.85250 323.58200
+deselectAll
+zoomBox -11.68900 234.47650 232.95600 -5.95050
+refinePlace -checkRoute 0 -preserveRouting 1 -rmAffectedRouting 0 -swapEEQ 0
+checkPlace picorv32.checkPlace
+setDrawView place
+fit
+zoomBox 40.62950 178.45200 53.28250 163.69050
+selectMarker 45.2000 168.9100 46.2000 170.6200 -1 12 87
+deselectAll
+selectMarker 45.2000 168.9100 46.2000 170.6200 -1 12 87
+deselectAll
+zoomBox 30.52350 165.37600 60.85350 177.92400
+zoomBox 25.50300 159.37100 74.89150 179.80350
+zoomBox -4.89900 131.86450 149.16350 195.60150
+zoomBox -12.79550 124.72000 168.45450 199.70500
+zoomBox -18.48000 99.03900 276.65650 221.14000
+zoomBox -24.13800 73.47750 384.35600 242.47550
+zoomBox -390.49450 -49.03300 692.61550 399.06050
+zoomBox -34.88550 234.93300 248.42950 -23.63250
+gui_select -rect {256.57000 -7.02950 -9.13600 221.47050}
+setRouteMode -earlyGlobalMinRouteLayer 2 -earlyGlobalMaxRouteLayer 11 -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+earlyGlobalRoute
+setRouteMode -earlyGlobalMinRouteLayer 2 -earlyGlobalMaxRouteLayer 8 -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+earlyGlobalRoute
+setRouteMode -earlyGlobalMinRouteLayer 2 -earlyGlobalMaxRouteLayer 8 -earlyGlobalHonorMsvRouteConstraint true -earlyGlobalRoutePartitionPinGuide true
+earlyGlobalRoute
+generateCapTbl -ict .ict -output .capTbl -lef ../../../../../../../../apps/prebuilt/eda/designkits/GPDK/gsclib045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_svt_v4.4/gsclib045/lef/gsclib045_tech.lef -shrinkFactor 1.0
+generateCapTbl -ict .ict -output .capTbl -lef ../../../../../../../../apps/prebuilt/eda/designkits/GPDK/gsclib045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_svt_v4.4/gsclib045/lef/gsclib045_tech.lef -shrinkFactor 1.0
+generateCapTbl -ict .ict -output .capTbl -lef ../../../../../../../../apps/prebuilt/eda/designkits/GPDK/gsclib045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_svt_v4.4/gsclib045/lef/gsclib045_tech.lef -shrinkFactor 1.0
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -preCTS -pathReports -drvReports -slackReports -numPaths 50 -prefix picorv32_preCTS -outDir timingReports
+reset_parasitics
+extractRC
+all_hold_analysis_views 
+all_setup_analysis_views 
+write_sdf  -ideal_clock_network picorv32.sdf
+redirect -quiet {set honorDomain [getAnalysisMode -honorClockDomains]} > /dev/null
+timeDesign -preCTS -hold -pathReports -slackReports -numPaths 50 -prefix picorv32_preCTS -outDir timingReports
+report_power
+report_area
+set_power_analysis_mode -reset
+set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+set_power_output_dir -reset
+set_power_output_dir run1
+set_default_switching_activity -reset
+set_default_switching_activity -input_activity 0.2 -period 10.0
+read_activity_file -reset
+set_power -reset
+set_powerup_analysis -reset
+set_dynamic_power_simulation -reset
+report_power -rail_analysis_format VS -outfile run1/picorv32.rpt
+set_rail_analysis_mode -method era_static -power_switch_eco false -generate_movies false -save_voltage_waveforms false -generate_decap_eco true -accuracy xd -analysis_view default_emulate_view -process_techgen_em_rules false -enable_rlrp_analysis false -extraction_tech_file /mnt/apps/prebuilt/eda/designkits/GPDK/gsclib045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_svt_v4.4/gsclib045/qrc/qx/gpdk045.tch -vsrc_search_distance 50 -ignore_shorts false -enable_manufacturing_effects false -report_via_current_direction false
+set_power_analysis_mode -reset
+set_power_analysis_mode -method static -analysis_view default_emulate_view -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+set_power_output_dir -reset
+set_power_output_dir run1
+set_default_switching_activity -reset
+set_default_switching_activity -input_activity 0.2 -period 10.0
+read_activity_file -reset
+set_power -reset
+set_powerup_analysis -reset
+set_dynamic_power_simulation -reset
+report_power -rail_analysis_format VS -outfile run1/picorv32.rpt
+set_rail_analysis_mode -method era_static -power_switch_eco false -generate_movies false -save_voltage_waveforms false -generate_decap_eco true -accuracy xd -analysis_view default_emulate_view -process_techgen_em_rules false -enable_rlrp_analysis false -extraction_tech_file /mnt/apps/prebuilt/eda/designkits/GPDK/gsclib045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_svt_v4.4/gsclib045/qrc/qx/gpdk045.tch -vsrc_search_distance 50 -ignore_shorts false -enable_manufacturing_effects false -report_via_current_direction false
+setDrawView place
+create_power_pads -net Vdd -auto_fetch
+setDrawView place
+create_power_pads -net Vdd -vsrc_file vdd.pp
+set_pg_nets -net Vdd -voltage 1.1 -threshold 1
+set_power_data -reset
+set_power_data -format current -scale 1 run1/static_Vdd.ptiavg
+set_power_pads -reset
+set_power_pads -net Vdd -format xy -file vdd.pp
+set_package -reset
+set_package -spice {} -mapping {}
+set_net_group -reset
+set_advanced_rail_options -reset
+analyze_rail -type net -results_directory run1 Vdd
+setLayerPreference powerNet -color {#0000FF #0010DE #0020BD #00319C #00417B #00525A #006239 #007318 #088300 #299400 #4AA400 #6AB400 #8BC500 #ACD500 #CDE600 #EEF600 #FFF900 #FFED00 #FFE200 #FFD600 #FFCB00 #FFBF00 #FFB400 #FFA800 #FF9500 #FF8000 #FF6A00 #FF5500 #FF4000 #FF2A00 #FF1500 #FF0000}
+set_power_rail_display -plot none
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+set_power_rail_display -enable_voltage_sources 0
+set_power_rail_display -enable_percentage_range 0
+fit
+set_power_rail_display -plot none
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+::read_power_rail_results -power_db run1/power_7.db -rail_directory run1/Vdd_25C_avg_12 -instance_voltage_window { timing  whole  } -instance_voltage_method {  worst  best  avg  worstavg }
+zoomBox -183.87900 -13.53450 413.62450 270.95150
+set_power_rail_display -plot ir
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+set_power_rail_display -range_min 0 -range_max 1.17549e-38 -advance_mode false -filter_max 1.17549e-38 -filter_min 0
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+set_power_rail_display -range_min 0 -range_max 1.17549e-38 -advance_mode false -filter_max 1.17549e-38 -filter_min 0
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+set_power_rail_display -plot rc
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+set_power_rail_display -range_min 1e-09 -range_max 10 -advance_mode false -filter_max 10 -filter_min 1e-09
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+set_power_rail_display -plot ir
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+set_power_rail_display -range_min 0 -range_max 1.17549e-38 -advance_mode false -filter_max 1.17549e-38 -filter_min 0
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+setLayerPreference powerNet -color {#0000ff #0010de #0020bd #00319c #00417b #00525a #006239 #007318 #088300 #299400 #4aa400 #6ab400 #8bc500 #acd500 #cde600 #eef600 #fff900 #ffed00 #ffe200 #ffd600 #ffcb00 #ffbf00 #ffb400 #ffa800 #ff9500 #ff8000 #ff6a00 #ff5500 #ff4000 #ff2a00 #ff1500 #ff0000}
+saveDesign picorv32
+zoomBox -45.35750 167.16350 79.93200 33.19050
+zoomBox -6.56700 131.33350 51.26700 50.91100
+fit
+zoomBox -17.36350 36.80850 147.47700 -10.99150
+fit
+zoomBox 108.11250 230.11850 120.76550 210.43600
+zoomBox 108.13100 221.93650 114.45350 217.55950
+fit
+saveDesign picorv32

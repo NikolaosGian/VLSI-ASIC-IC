@@ -1,0 +1,501 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Sat Nov  5 15:03:37 2022                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v19.11-s128_1 (64bit) 08/20/2019 20:54 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: NanoRoute 19.11-s128_1 NR190815-2055/19_11-UB (database version 18.20, 469.7.1) {superthreading v1.51}
+#@(#)CDS: AAE 19.11-s034 (64bit) 08/20/2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+#@(#)CDS: CTE 19.11-s040_1 () Aug  1 2019 08:53:57 ( )
+#@(#)CDS: SYNTECH 19.11-e010_1 () Jul 15 2019 20:31:02 ( )
+#@(#)CDS: CPE v19.11-s006
+#@(#)CDS: IQuantus/TQuantus 19.1.2-s245 (64bit) Thu Aug 1 10:22:01 PDT 2019 (Linux 2.6.32-431.11.2.el6.x86_64)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+getVersion
+getVersion
+getVersion
+win
+encMessage warning 0
+encMessage debug 0
+encMessage info 0
+is_common_ui_mode
+restoreDesign /mnt/scratch_b/users/n/ngiannop/Desktop/VLSI_ASIC22/innovus/logs/picorv32.dat picorv32
+setDrawView fplan
+encMessage warning 1
+encMessage debug 0
+encMessage info 1
+set_power_analysis_mode -reset
+set_power_analysis_mode -method static -analysis_view default_emulate_view -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+set_power_output_dir -reset
+set_power_output_dir ./run1
+set_default_switching_activity -reset
+set_default_switching_activity -input_activity 0.2 -period 10.0
+read_activity_file -reset
+set_power -reset
+set_powerup_analysis -reset
+set_dynamic_power_simulation -reset
+report_power -rail_analysis_format VS -outfile ./run1/picorv32.rpt
+set_rail_analysis_mode -method era_static -power_switch_eco false -generate_movies false -save_voltage_waveforms false -generate_decap_eco true -accuracy xd -analysis_view default_emulate_view -process_techgen_em_rules false -enable_rlrp_analysis false -extraction_tech_file /mnt/apps/prebuilt/eda/designkits/GPDK/gsclib045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_svt_v4.4/gsclib045/qrc/qx/gpdk045.tch -vsrc_search_distance 50 -ignore_shorts false -enable_manufacturing_effects false -report_via_current_direction false
+setDrawView place
+setDrawView place
+create_power_pads -clear
+create_power_pads -net Vdd -auto_fetch
+setDrawView place
+create_power_pads -net Vdd -vsrc_file vdd.pp
+set_pg_nets -net Vdd -voltage 1.1 -threshold 1
+set_power_data -reset
+set_power_data -format current -scale 1 run1/static_Vdd.ptiavg
+set_power_pads -reset
+set_power_pads -net Vdd -format xy -file vdd.pp
+set_package -reset
+set_package -spice {} -mapping {}
+set_net_group -reset
+set_advanced_rail_options -reset
+analyze_rail -type net -results_directory run1 Vdd
+editPowerVia -top_layer Metal5 -area 0 3.055 3.155 0 -add_vias 1 -bottom_layer Metal6
+editPowerVia -top_layer Metal5 -area 0 3.055 3.155 0 -add_vias -bottom_layer Metal6
+editPowerVia -top_layer Metal5 -area 0 3.055 3.155 0 -add_vias true -bottom_layer Metal6
+editPowerVia -add_vias 1 -top_layer Metal5 -area 0 3.055 3.155 0 -bottom_layer Metal6
+editPowerVia -add_vias 1 -top_layer Metal5 -area {0 3.055 3.155 0} -bottom_layer Metal6
+editPowerVia -add_vias 1 -top_layer Metal6 -area {0 3.055 3.155 0} -bottom_layer Metal5
+editPowerVia -add_vias 1 -top_layer Metal6 -area {9 9 12 0} -bottom_layer Metal5
+zoomBox -7.33550 34.19400 27.96600 -12.75650
+zoomBox -0.00050 6.77750 2.74150 3.96750
+fit
+zoomBox -10.51250 15.83750 21.96450 -7.46150
+gui_select -rect {1.16750 5.09100 2.55400 4.08250}
+deleteSelectedFromFPlan
+editPowerVia -add_vias 1 -top_layer Metal6 -area {0 3.055 3.155 0} -bottom_layer Metal5
+editPowerVia -add_vias 1 -top_layer Metal6 -area {9 9 12 0} -bottom_layer Metal5
+fit
+set_pg_nets -net Vdd -voltage 1.1 -threshold 1
+set_power_data -reset
+set_power_data -format current -scale 1 run1/static_Vdd.ptiavg
+set_power_pads -reset
+set_power_pads -net Vdd -format xy -file vdd.pp
+set_package -reset
+set_package -spice {} -mapping {}
+set_net_group -reset
+set_advanced_rail_options -reset
+analyze_rail -type net -results_directory run1 Vdd
+zoomBox -15.45450 33.84100 39.26200 -5.34350
+selectPhyPin 0.0000 0.0000 3.1550 3.0550 5 GND
+deselectAll
+selectPhyPin 0.0000 0.0000 3.1550 3.0550 5 GND
+deleteSelectedFromFPlan
+zoomBox -21.10100 -12.45600 43.27200 44.58850
+zoomBox -16.45400 -9.72050 38.26300 38.76750
+zoomBox -12.50400 -7.39550 34.00550 33.81950
+uiSetTool ruler
+uiSetTool ruler
+fit
+zoomBox 199.52950 228.35050 233.41850 196.22650
+createPGPin GND -net GND -geom Metal5 4.450 2.830 4.410 2.720
+fit
+zoomBox -12.98350 25.36850 23.02350 -9.57950
+uiSetTool select
+zoomBox 1.27000 7.10350 6.62700 1.90000
+selectObject IO_Pin GND
+fit
+zoomBox -8.04150 37.72400 32.20200 -7.81450
+deselectAll
+uiSetTool ruler
+fit
+zoomBox 192.11600 225.87950 230.94750 195.52050
+createPGPin VDD -net Vdd -geom Metal6 10.505 9.040 10.345 8.790
+fit
+zoomBox -9.45350 29.95800 29.02500 -8.16750
+uiSetTool select
+selectPhyPin 9.0000 0.0000 12.0000 9.0000 6 Vdd
+deleteSelectedFromFPlan
+editPowerVia -add_vias 1 -top_layer Metal6 -area {4.450 2.830 4.410 2.720} -bottom_layer Metal5
+editPowerVia -add_vias 1 -top_layer Metal6 -area {10.505 9.040 10.345 8.790} -bottom_layer Metal5
+set_power_output_dir -reset
+set_power_output_dir ./run1
+set_default_switching_activity -reset
+set_default_switching_activity -input_activity 0.2 -period 10.0
+read_activity_file -reset
+set_power -reset
+set_powerup_analysis -reset
+set_dynamic_power_simulation -reset
+report_power -rail_analysis_format VS -outfile ./run1/picorv32.rpt
+set_rail_analysis_mode -method era_static -power_switch_eco false -generate_movies false -save_voltage_waveforms false -generate_decap_eco true -accuracy xd -analysis_view default_emulate_view -process_techgen_em_rules false -enable_rlrp_analysis false -extraction_tech_file /mnt/apps/prebuilt/eda/designkits/GPDK/gsclib045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_svt_v4.4/gsclib045/qrc/qx/gpdk045.tch -vsrc_search_distance 50 -ignore_shorts false -enable_manufacturing_effects false -report_via_current_direction false
+set_pg_nets -net Vdd -voltage 1.1 -threshold 1
+set_power_data -reset
+set_power_data -format current -scale 1 run1/static_Vdd.ptiavg
+set_power_pads -reset
+set_power_pads -net Vdd -format xy -file vdd.pp
+set_package -reset
+set_package -spice {} -mapping {}
+set_net_group -reset
+set_advanced_rail_options -reset
+analyze_rail -type net -results_directory run1 Vdd
+setDrawView fplan
+setDrawView ameba
+fit
+setDrawView fplan
+setDrawView place
+setDrawView place
+setDrawView place
+setDrawView fplan
+zoomBox -12.63050 29.60500 29.02500 -0.40100
+setDrawView place
+setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+setEndCapMode -reset
+setEndCapMode -boundary_tap false
+setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
+setNanoRouteMode -quiet -droutePostRouteWidenWireRule LEFSpecialRouteSpec
+setNanoRouteMode -quiet -timingEngine {}
+setUsefulSkewMode -maxSkew false -noBoundary false -useCells {DLY4X4 DLY4X1 DLY3X4 DLY3X1 DLY2X4 DLY2X1 DLY1X4 DLY1X1 CLKBUFX8 CLKBUFX6 CLKBUFX4 CLKBUFX3 CLKBUFX20 CLKBUFX2 CLKBUFX16 CLKBUFX12 BUFX8 BUFX6 BUFX4 BUFX3 BUFX20 BUFX2 BUFX16 BUFX12 INVXL INVX8 INVX6 INVX4 INVX3 INVX20 INVX2 INVX16 INVX12 INVX1 CLKINVX8 CLKINVX6 CLKINVX4 CLKINVX3 CLKINVX20 CLKINVX2 CLKINVX16 CLKINVX12 CLKINVX1} -maxAllowedDelay 1
+setPlaceMode -reset
+setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 1 -ignoreScan 1 -reorderScan 1 -ignoreSpare 0 -placeIOPins 1 -moduleAwareSpare 0 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+set_pg_nets -net Vdd -voltage 1.1 -threshold 1
+set_power_data -reset
+set_power_data -format current -scale 1 run1/static_Vdd.ptiavg
+set_power_pads -reset
+set_power_pads -net Vdd -format xy -file vdd.pp
+set_package -reset
+set_package -spice {} -mapping {}
+set_net_group -reset
+set_advanced_rail_options -reset
+analyze_rail -type net -results_directory run1 Vdd
+setDrawView place
+create_power_pads -net Vdd -auto_fetch
+setDrawView place
+create_power_pads -net Vdd -vsrc_file vdd.pp
+set_pg_nets -net Vdd -voltage 1.1 -threshold 1
+set_power_data -reset
+set_power_data -format current -scale 1 run1/static_Vdd.ptiavg
+set_power_pads -reset
+set_power_pads -net Vdd -format xy -file vdd.pp
+set_package -reset
+set_package -spice {} -mapping {}
+set_net_group -reset
+set_advanced_rail_options -reset
+analyze_rail -type net -results_directory run1 Vdd
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set_power_analysis_mode -reset
+set_power_analysis_mode -method static -analysis_view default_emulate_view -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+set_power_analysis_mode -reset
+set_power_analysis_mode -method static -analysis_view default_emulate_view -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+set_power_output_dir -reset
+set_power_output_dir ./run1
+set_default_switching_activity -reset
+set_default_switching_activity -input_activity 0.2 -period 10.0
+read_activity_file -reset
+set_power -reset
+set_powerup_analysis -reset
+set_dynamic_power_simulation -reset
+report_power -rail_analysis_format VS -outfile ./run1/picorv32.rpt
+set_rail_analysis_mode -method era_static -power_switch_eco false -generate_movies false -save_voltage_waveforms false -generate_decap_eco true -accuracy xd -analysis_view default_emulate_view -process_techgen_em_rules false -enable_rlrp_analysis false -extraction_tech_file ../../../../../../../../apps/prebuilt/eda/designkits/GPDK/gsclib045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_svt_v4.4/gsclib045/qrc/qx/gpdk045.tch -vsrc_search_distance 50 -ignore_shorts false -enable_manufacturing_effects false -report_via_current_direction false
+set_pg_nets -net Vdd -voltage 1.1 -threshold 1
+set_power_data -reset
+set_power_data -format current -scale 1 run1/static_Vdd.ptiavg
+set_power_pads -reset
+set_power_pads -net Vdd -format xy -file vdd.pp
+set_package -reset
+set_package -spice {} -mapping {}
+set_net_group -reset
+set_advanced_rail_options -reset
+analyze_rail -type net -results_directory run1 Vdd
+set_pg_nets -net Vdd -voltage 1.1 -threshold 1
+set_power_data -reset
+set_power_data -format current -scale 1 run1/static_Vdd.ptiavg
+set_power_pads -reset
+set_power_pads -net Vdd -format xy -file vdd.pp
+set_package -reset
+set_package -spice {} -mapping {}
+set_net_group -reset
+set_advanced_rail_options -reset
+analyze_rail -type net -results_directory run1 Vdd
+help PRL-387
+fit
+zoomBox -8.22500 223.08900 35.70900 184.77850
+fit
+gui_select -rect {97.91950 141.54750 120.06250 101.83100}
+zoomBox 97.91950 142.95350 121.81950 103.23700
+deselectAll
+selectWire 106.6000 13.8800 109.6000 205.9500 5 GND
+deselectAll
+selectWire 106.6000 13.8800 109.6000 205.9500 5 GND
+deselectAll
+fit
+checkDesign -io -netlist -physicalLibrary -powerGround -tieHilo -timingLibrary -spef -floorplan -place -outdir checkDesign
+zoomBox -11.03700 20.99250 21.65000 -5.36800
+selectWire 3.0000 3.0050 6.0000 216.8250 6 GND
+deselectAll
+zoomBox 2.26000 6.54800 6.01500 1.26050
+selectPhyPin 4.4100 2.7200 4.4500 2.8300 5 GND
+gui_select -rect {4.41800 2.64400 4.44100 2.31350}
+deselectAll
+selectPhyPin 4.4100 2.7200 4.4500 2.8300 5 GND
+uiSetTool move
+deselectAll
+selectObject IO_Pin GND
+moveGroupPins -loc -0.20000 3.17450
+moveGroupPins -loc 4.35700 -0.20000
+deselectAll
+selectPhyPin 4.4100 2.7200 4.4500 2.8300 5 GND
+editMove -1.8675 0.338
+editMove -0.5535 0.5915
+editMove 2.498 -0.761
+zoomBox -8.33350 -0.68050 12.47850 7.92950
+zoomBox -18.77700 -5.10800 15.11300 8.91250
+zoomBox -37.03750 -13.11500 18.14750 9.71550
+zoomBox 8.69000 9.51650 11.94200 7.79100
+uiSetTool select
+zoomBox 6.32650 7.00700 14.31700 10.31300
+zoomBox 4.56000 6.15000 15.62100 10.72600
+zoomBox 3.42700 5.60050 16.44100 10.98450
+zoomBox 2.07750 4.97200 17.38900 11.30650
+fit
+zoomBox -16.66050 28.02200 27.97650 -9.58550
+deselectAll
+zoomBox -18.60450 -3.88950 28.84800 15.74200
+zoomBox -12.18300 -2.16350 22.10200 12.02050
+zoomBox -9.67500 -1.48950 19.46750 10.56700
+zoomBox -4.19150 -0.01550 13.70650 7.38900
+zoomBox -15.93300 -3.11950 24.40700 13.56950
+zoomBox -29.19350 -6.62550 36.49350 20.55000
+selectWire 3.0000 3.0050 6.0000 216.8250 6 GND
+::dehighlight special_wire:0x7f2f9cdbc080
+deselectAll
+setSrouteMode -viaConnectToShape { stripe }
+sroute -connect { corePin } -layerChangeRange { Metal1(1) Metal8(8) } -blockPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal8(8) } -nets { GND Vdd } -allowLayerChange 1 -targetViaLayerRange { Metal1(1) Metal8(8) }
+set_power_analysis_mode -reset
+set_power_analysis_mode -method static -analysis_view default_emulate_view -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+set_power_output_dir -reset
+set_power_output_dir ./run1
+set_default_switching_activity -reset
+set_default_switching_activity -input_activity 0.2 -period 10.0
+read_activity_file -reset
+set_power -reset
+set_powerup_analysis -reset
+set_dynamic_power_simulation -reset
+report_power -rail_analysis_format VS -outfile ./run1/picorv32.rpt
+set_rail_analysis_mode -method era_static -power_switch_eco false -generate_movies false -save_voltage_waveforms false -generate_decap_eco true -accuracy xd -analysis_view default_emulate_view -process_techgen_em_rules false -enable_rlrp_analysis false -extraction_tech_file ../../../../../../../../apps/prebuilt/eda/designkits/GPDK/gsclib045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_svt_v4.4/gsclib045/qrc/qx/gpdk045.tch -vsrc_search_distance 50 -ignore_shorts false -enable_manufacturing_effects false -report_via_current_direction false
+set_pg_nets -net Vdd -voltage 1.1 -threshold 1
+set_power_data -reset
+set_power_data -format current -scale 1 run1/static_Vdd.ptiavg
+set_power_pads -reset
+set_power_pads -net Vdd -format xy -file vdd.pp
+set_package -reset
+set_package -spice {} -mapping {}
+set_net_group -reset
+set_advanced_rail_options -reset
+analyze_rail -type net -results_directory run1 Vdd
+zoomBox 2.20800 4.71100 5.48650 1.90650
+zoomBox 4.08550 2.75450 3.69800 3.12550
+zoomBox 3.35550 2.71600 4.41100 3.15250
+zoomBox 2.99400 2.55950 4.71200 3.27050
+zoomBox 2.82750 2.48700 4.84950 3.32350
+zoomBox 2.40350 2.30150 5.20200 3.45950
+zoomBox 0.77750 1.74900 6.14100 3.96800
+fit
+zoomBox -23.33850 25.21000 38.16950 -12.74900
+zoomBox -21.82450 -6.43250 34.52300 16.87900
+zoomBox -17.86050 -5.03500 30.03550 14.78000
+zoomBox -7.04050 -1.47550 17.96150 8.86800
+zoomBox -2.48100 0.02150 12.87400 6.37400
+zoomBox 1.43200 1.53600 8.24600 4.35500
+zoomBox 1.89650 1.72100 7.68850 4.11700
+selectPhyPin 4.4850 2.8900 4.5250 3.0000 5 GND
+deleteSelectedFromFPlan
+createPGPin GND -net GND -geom Metal5 4.450 2.830 4.410 2.720
+zoomBox 1.89650 1.48150 7.68850 3.87750
+zoomBox 1.89650 1.24200 7.68850 3.63800
+zoomBox 0.93600 0.82750 8.95300 4.14400
+zoomBox -1.23900 -0.11200 11.81550 5.28900
+uiSetTool ruler
+uiSetTool select
+selectPhyPin 4.4100 2.7200 4.4500 2.8300 5 GND
+deleteSelectedFromFPlan
+createPGPin GND -net GND -geom Metal5 4.450 3.055 4.410 2.720
+zoomBox 0.94100 1.06900 8.95850 4.38600
+zoomBox 1.46150 1.35100 8.27650 4.17050
+zoomBox 2.29450 1.79600 7.21850 3.83300
+zoomBox 2.62050 1.96950 6.80600 3.70100
+zoomBox -0.08850 1.11100 9.34700 5.01450
+editPowerVia -add_vias 1 -top_layer Metal6 -area {4.450 3.055 4.410 2.720} -bottom_layer Metal5
+zoomBox 2.49000 1.74100 8.28500 4.13850
+selectWire 3.0000 3.0050 219.2000 6.0050 5 GND
+zoomBox 1.98150 1.53700 8.79900 4.35750
+zoomBox -1.12400 0.29050 11.93750 5.69400
+zoomBox -13.82400 -3.60150 20.80950 10.72650
+zoomBox 8.21000 10.18500 11.87500 8.29000
+deselectAll
+selectPhyPin 10.3450 8.7900 10.5050 9.0400 6 Vdd
+deleteSelectedFromFPlan
+createPGPin VDD -net Vdd -geom Metal6 10.505 9.040 10.345 8.790
+editPowerVia -add_vias 1 -top_layer Metal6 -area {10.505 9.040 10.345 8.790} -bottom_layer Metal5
+editPowerVia -add_vias 1 -top_layer Metal6 -area {4.450 3.055 4.410 2.720} -bottom_layer Metal5
+set_pg_nets -net Vdd -voltage 1.1 -threshold 1
+set_power_data -reset
+set_power_data -format current -scale 1 run1/static_Vdd.ptiavg
+set_power_pads -reset
+set_power_pads -net Vdd -format xy -file vdd.pp
+set_package -reset
+set_package -spice {} -mapping {}
+set_net_group -reset
+set_advanced_rail_options -reset
+analyze_rail -type net -results_directory run1 Vdd
+getCTSMode -engine -quiet
+setVerifyGeometryMode -area { 0 0 0 0 } -minWidth true -minSpacing true -minArea true -sameNet true -short true -overlap true -offRGrid false -offMGrid true -mergedMGridCheck true -minHole true -implantCheck true -minimumCut true -minStep true -viaEnclosure true -antenna false -insuffMetalOverlap true -pinInBlkg false -diffCellViol true -sameCellViol false -padFillerCellsOverlap true -routingBlkgPinOverlap true -routingCellBlkgOverlap true -regRoutingOnly false -stackedViasOnRegNet false -wireExt true -useNonDefaultSpacing false -maxWidth true -maxNonPrefLength -1 -error 1000
+verifyGeometry
+setVerifyGeometryMode -area { 0 0 0 0 }
+zoomBox -0.19850 -2.63800 7.31350 3.92050 .uiCellView.win
+zoomBox 0.24400 -2.14750 6.62950 3.42750 .uiCellView.win
+zoomBox 0.62000 -1.73050 6.04800 3.00850 .uiCellView.win
+zoomBox 0.93950 -1.37600 5.55350 2.65250 .uiCellView.win
+zoomBox 1.04700 -1.09350 4.96950 2.33100 .uiCellView.win
+verifyPowerVia
+set_power_analysis_mode -reset
+set_power_analysis_mode -method static -analysis_view default_emulate_view -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+set_power_output_dir -reset
+set_power_output_dir ./run1
+set_default_switching_activity -reset
+set_default_switching_activity -input_activity 0.2 -period 10.0
+read_activity_file -reset
+set_power -reset
+set_powerup_analysis -reset
+set_dynamic_power_simulation -reset
+report_power -rail_analysis_format VS -outfile ./run1/picorv32.rpt
+set_rail_analysis_mode -method era_static -power_switch_eco false -generate_movies false -save_voltage_waveforms false -generate_decap_eco true -accuracy xd -analysis_view default_emulate_view -process_techgen_em_rules false -enable_rlrp_analysis false -extraction_tech_file ../../../../../../../../apps/prebuilt/eda/designkits/GPDK/gsclib045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_svt_v4.4/gsclib045/qrc/qx/gpdk045.tch -vsrc_search_distance 50 -ignore_shorts false -enable_manufacturing_effects false -report_via_current_direction false
+set_pg_nets -net Vdd -voltage 1.1 -threshold 1
+set_power_data -reset
+set_power_data -format current -scale 1 run1/static_Vdd.ptiavg
+set_power_pads -reset
+set_power_pads -net Vdd -format xy -file vdd.pp
+set_package -reset
+set_package -spice {} -mapping {}
+set_net_group -reset
+set_advanced_rail_options -reset
+analyze_rail -type net -results_directory ./run1 Vdd
+zoomBox 1.81400 7.29750 13.96150 12.32300
+zoomBox 7.11550 8.18250 12.50700 10.41300
+zoomBox 8.43600 8.43000 11.74750 9.80000
+zoomBox 8.75100 8.48900 11.56600 9.65350
+zoomBox 9.44050 8.61800 11.17000 9.33350
+selectObject IO_Pin VDD
+deselectAll
+selectPhyPin 10.3450 8.7900 10.5050 9.0400 6 Vdd
+zoomBox -649.05500 -138.95800 330.42050 266.26100
+zoomBox -333.74250 -68.29450 177.55100 143.23300
+zoomBox -238.18750 -46.88000 131.22350 105.94900
+zoomBox -142.18500 -25.36550 84.67950 68.49050
+zoomBox -0.99150 9.28450 8.42150 -1.35600
+deselectAll
+zoomBox -1.48550 0.99100 9.92850 5.71300
+zoomBox 1.37400 1.84950 7.33350 4.31500
+zoomBox 2.57950 2.21150 6.24000 3.72600
+selectPhyPin 4.4100 2.7200 4.4500 3.0550 5 GND
+deselectAll
+zoomBox 1.26850 1.81500 7.23050 4.28150
+zoomBox 0.66900 1.63400 7.68350 4.53600
+zoomBox -5.92950 -0.35950 12.67150 7.33600
+zoomBox -15.62950 -3.28900 20.00550 11.45350
+zoomBox -19.21050 -4.37050 22.71300 12.97350
+gui_select -rect {-0.98400 0.59550 0.50350 -0.69000}
+zoomBox -10.00500 -2.34700 11.88100 6.70750
+zoomBox -4.41250 -1.11750 5.29950 2.90050
+zoomBox -2.28050 -0.64900 2.79050 1.44900
+zoomBox -1.63450 -0.50700 2.03000 1.00900
+zoomBox -1.38200 -0.45150 1.73300 0.83700
+zoomBox -8.50800 -2.01900 10.11550 5.68550
+zoomBox -10.01800 -2.35150 11.89200 6.71300
+zoomBox -16.34350 -3.74200 19.33400 11.01800
+zoomBox -19.23600 -4.37850 22.73750 12.98650
+zoomBox -36.89450 -8.26150 43.51550 25.00500
+deselectAll
+zoomBox 3.91500 0.78050 5.36550 -1.83050
+zoomBox -63.42900 -14.43700 75.00850 42.83600
+fit
+zoomBox -207.38600 -21.41200 480.25950 263.07400
+zoomBox -179.97200 -10.93000 404.52800 230.88350
+zoomBox -8.80450 27.38050 22.82800 -8.11850
+zoomBox -20.70050 -4.05700 31.99600 17.74400
+zoomBox -13.88250 -2.26350 24.19150 13.48800
+zoomBox -6.86550 -0.47050 16.51700 9.20300
+zoomBox -2.53050 0.65200 11.82950 6.59300
+selectPhyPin 4.4100 2.7200 4.4500 3.0550 5 GND
+deleteSelectedFromFPlan
+zoomBox -8.96650 -2.65250 14.41750 7.02150
+zoomBox -19.07450 -7.51200 19.00300 8.24100
+zoomBox -62.50300 -28.23550 38.45900 13.53350
+zoomBox 8.77150 10.55850 13.02100 7.52300
+selectPhyPin 10.3450 8.7900 10.5050 9.0400 6 Vdd
+deleteSelectedFromFPlan
+zoomBox 5.12500 6.62450 17.07450 11.56800
+fit
+zoomBox -12.44300 26.26450 31.14000 -9.23400
+createPGPin VDD -net Vdd -geom Metal6 20 0 20.8 0.08
+gui_select -rect {18.92000 1.03350 20.98350 -1.44300}
+zoomBox 20.00350 1.18850 21.13850 -1.33950
+deselectAll
+fit
+zoomBox -16.30900 23.10150 30.43700 -9.23400
+createPGPin GND -net GND -geom Metal7 10 0 10.8 0.08
+zoomBox 9.53150 1.34100 11.88150 -0.82100
+fit
+zoomBox -25.09600 44.54100 31.14000 -5.36800
+zoomBox -65.40050 -6.18750 76.52600 52.52900
+zoomBox -3.35550 15.40450 24.12500 -3.96850
+editPowerVia -add_vias 1 -top_layer Metal6 -area {10 0 10.8 0.08} -bottom_layer Metal5
+editPowerVia -add_vias 1 -top_layer Metal6 -area {20 0 20.8 0.08} -bottom_layer Metal5
+set_power_analysis_mode -reset
+set_power_analysis_mode -method static -analysis_view default_emulate_view -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+set_power_output_dir -reset
+set_power_output_dir ./run1
+set_default_switching_activity -reset
+set_default_switching_activity -input_activity 0.2 -period 10.0
+read_activity_file -reset
+set_power -reset
+set_powerup_analysis -reset
+set_dynamic_power_simulation -reset
+report_power -rail_analysis_format VS -outfile ./run1/picorv32.rpt
+set_rail_analysis_mode -method era_static -power_switch_eco false -generate_movies false -save_voltage_waveforms false -generate_decap_eco true -accuracy xd -analysis_view default_emulate_view -process_techgen_em_rules false -enable_rlrp_analysis false -extraction_tech_file ../../../../../../../../apps/prebuilt/eda/designkits/GPDK/gsclib045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_svt_v4.4/gsclib045/qrc/qx/gpdk045.tch -vsrc_search_distance 50 -ignore_shorts false -enable_manufacturing_effects false -report_via_current_direction false
+setDrawView place
+create_power_pads -net Vdd -auto_fetch
+setDrawView place
+create_power_pads -clear
+create_power_pads -vsrc_file vdd.pp
+setDrawView place
+create_power_pads -net Vdd -auto_fetch
+setDrawView place
+create_power_pads -net Vdd -vsrc_file vdd.pp
+set_pg_nets -net Vdd -voltage 1.1 -threshold 1
+set_power_data -reset
+set_power_data -format current -scale 1 run1/static_Vdd.ptiavg
+set_power_pads -reset
+set_power_pads -net Vdd -format xy -file vdd.pp
+set_package -reset
+set_package -spice {} -mapping {}
+set_net_group -reset
+set_advanced_rail_options -reset
+analyze_rail -type net -results_directory ./run1 Vdd
+zoomBox -34.32800 -9.59000 55.37950 27.52300
+zoomBox -51.44150 -14.10700 72.72100 37.26050
+fit
+zoomBox -26.15000 20.64100 37.81800 -12.74900
+saveDesign picorv32
