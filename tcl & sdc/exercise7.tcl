@@ -48,7 +48,7 @@ check_timing_intent > check_timing_intent
 set_db / .use_scan_seqs_for_non_dft false
 
 #do syn_generic
-syn_generic 
+#syn_generic 
 
 #verification elab vs generic map
 write_netlist -lec > generic.v
