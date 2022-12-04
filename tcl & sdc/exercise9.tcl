@@ -80,7 +80,7 @@ report_timing > report_timing_syn_gen
 report_power > report_power_syn_gen
 
 #do syn_generic
-syn_generic 
+#syn_generic 
  
 report_area > report_area_syn_generic
 
