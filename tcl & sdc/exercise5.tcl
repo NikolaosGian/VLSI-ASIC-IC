@@ -44,7 +44,7 @@ check_timing_intent > check_timing_intent
 set_db / .use_scan_seqs_for_non_dft false
 
 #do syn_generic
-syn_generic 
+#syn_generic 
 
 #do syn_map
 syn_map
