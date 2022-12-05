@@ -21,7 +21,6 @@ read_sdc exercise1.sdc
 read_sdc exercise1.sdc
 check_timing_intent
 set_db / .use_scan_seqs_for_non_dft false
-syn_generic
 syn_map
 syn_opt
 report_area
