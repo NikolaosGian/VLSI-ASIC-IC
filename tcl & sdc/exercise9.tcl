@@ -19,7 +19,7 @@ set_db lef_library {/mnt/apps/prebuilt/eda/designkits/GPDK/gsclib045/lan/flow/t1
 read_qrc /mnt/apps/prebuilt/eda/designkits/GPDK/gsclib045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_svt_v4.4/gsclib045/qrc/qx/gpdk045.tch
 #end
 
-#STA rule 1
+# rule 1
 set_db / .dft_scan_style muxed_scan
 
 
@@ -57,7 +57,7 @@ connect_scan_chains -auto_create_chains
 report_scan_chains > report_scan_chains
 
 #start clock gating
-syn_gen
+#syn_gen
 
 #get info about clock gating
 report_clock_gating > report_clock_gating
@@ -80,7 +80,7 @@ report_timing > report_timing_syn_gen
 report_power > report_power_syn_gen
 
 #do syn_generic
-#syn_generic 
+syn_generic 
  
 report_area > report_area_syn_generic
 
