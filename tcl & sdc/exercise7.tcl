@@ -33,7 +33,7 @@ write_netlist -lec > elab.v
 write_do_lec -top picorv32 -golden_design rtl -revised_design elab.v -log_file rtl_elab.lec.log > rtl_elab.do
 
 #start clock gating
-syn_gen
+#syn_gen
 
 #get info about clock gating
 report_clock_gating > report_clock_gating
@@ -48,7 +48,7 @@ check_timing_intent > check_timing_intent
 set_db / .use_scan_seqs_for_non_dft false
 
 #do syn_generic
-#syn_generic 
+syn_generic 
 
 #verification elab vs generic map
 write_netlist -lec > generic.v
