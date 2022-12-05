@@ -30,7 +30,7 @@ elaborate picorv32
 
 
 #start clock gating
-syn_gen
+#syn_gen
 
 #get info about clock gating
 report_clock_gating > report_clock_gating
@@ -45,7 +45,7 @@ check_timing_intent > check_timing_intent
 set_db / .use_scan_seqs_for_non_dft false
 
 #do syn_generic
-#syn_generic 
+syn_generic 
 
 
 #do syn_map
