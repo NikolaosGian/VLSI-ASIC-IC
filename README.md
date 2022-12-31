@@ -12,3 +12,5 @@
   </p>
 </div>
 <br />
+
+<img src="/VLSI-ASIC-IC/ic_with_pads.png" alt="IC with Pads">
