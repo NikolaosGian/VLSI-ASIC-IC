@@ -13,4 +13,7 @@
 </div>
 <br />
 
-<img src="/VLSI-ASIC-IC/ic_with_pads.png" alt="IC with Pads">
+<p align="center">
+  <img src="https://github.com/NikolaosGian/VLSI-ASIC-IC/blob/main/ic_with_pads.png" />
+</p>
+
