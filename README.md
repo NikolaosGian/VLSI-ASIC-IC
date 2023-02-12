@@ -17,7 +17,7 @@
 <a href="https://github.com/NikolaosGian/VLSI-ASIC-IC/blob/main/report.pdf" target="_blank"> Check the report file here </a>
 <p align="center">
   <img src="https://github.com/NikolaosGian/VLSI-ASIC-IC/blob/main/image.png" 
-  width="1000" 
+  width="900" 
      height="500"
      />
 </p>
